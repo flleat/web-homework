@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форма реєстрації</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Thread Creation</title>
 </head>
 <body>
     <div>
@@ -11,59 +12,74 @@
             <nav>
                 <img src="#" alt="logo">
                 <ul>
-                    <li><a href="index.html">Головна</a></li>
-                    <li><a href="#">Про нас</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
                 </ul>
                 <ul>
-                    <li><a href="login.html">Увійти</a></li>
-                    <li><a href="register.html">Реєстрація</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <aside></aside>
             <article>
-                <h2>Форма створення треда</h2>
+                <h2>Thread Creation Form</h2>
                 <form action="/create_thread" method="post">
                     <label for="title">Thread title:</label>
-                    <input type="text" id="title" name="title" required><br>
+                    <input type="text" id="title" name="title" required>
 
                     <label for="message">Thread content:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea><br>
+                    <textarea id="message" name="message" rows="4" required></textarea>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br>
+                    </div>
 
-                    <label for="phone">Phonenumber:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+380..." required><br>
+                    <div>
+                        <label for="phone">Phonenumber:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+380" required>
+                    </div>
 
-                    <label for="birthdate">BDay:</label>
-                    <input type="date" id="birthdate" name="birthdate" required><br>
+                    <div>
+                        <label for="birthdate">BDay:</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
 
-                    <label for="color">Theme color:</label>
-                    <input type="color" id="color" name="color"><br>
+                    <div>
+                        <label for="color">Theme color:</label>
+                        <input type="color" id="color" name="color">
+                    </div>
+                    
+                    <div>
+                        <label>Access by link:</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Yes</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">No</label>
+                    </div>
 
-                    <label>Access by link:</label>
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Yes</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">No</label><br>
-
+                    <div></div>
                     <label for="subscribe">Notify when reply:</label>
-                    <input type="checkbox" id="subscribe" name="subscribe" value="yes"><br>
+                    <input type="checkbox" id="subscribe" name="subscribe" value="yes">
 
-                    <label for="file">Download files:</label>
-                    <input type="file" id="file" name="file"><br>
+                    <div>
+                        <label for="file">Download files:</label>
+                        <input type="file" id="file" name="file">
+                    </div>
 
-                    <label for="options">Category</label>
-                    <select id="options" name="options">
+                    <div>
+                        <label for="options">Category</label>
+                        <select id="options" name="options">
                         <option value="option1">General</option>
                         <option value="option2">Technology</option>
                         <option value="option3">Entertainment</option>
-                    </select><br>
+                    </select>
+                    </div>
 
                     <button type="submit">Create</button>
+                    <button type="reset">Reset</button>
                 </form>
             </article>
         </main>
